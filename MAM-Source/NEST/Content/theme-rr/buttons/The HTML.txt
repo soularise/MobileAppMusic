@@ -1,0 +1,7 @@
+Notes:
+
+The HTML markup is minimal so that it may be applied in most website configurations without requiring anything excessive. It consists of a single <a> element with the base class of "button" and a color class (currently "blue" or "green"). There is also a <span> element that goes inside the <a> and has two functions:
+	1) If text is put inside the <span>, it will be rendered with normal width, not bold, similar to the first button example.
+	2) A <span> element, even empty, also adds the arrow to the end of the button. If the <span> is omitted, the button will still work fine but will not have a final arrow or secondary thin text.
+
+<a href="#" class="button blue">Button text <span></span></a>

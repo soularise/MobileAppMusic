@@ -1,0 +1,139 @@
+﻿@model NEST.Models.ContentBody
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>ContentBody</legend>
+
+        <div id="leftEditContainer">
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <!--
+        <div class="editor-label">
+
+        </div>
+        <div class="editor-field">
+
+        </div>
+        -->
+        <input type="hidden" name="Type" value="1" />
+        <div class="editor-label">
+            Sub Header
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubHeader)
+            @Html.ValidationMessageFor(model => model.SubHeader)
+        </div>
+
+        <div class="editor-label">
+            Promote To Home Page
+        </div>
+        <div class="editor-field">
+
+            <input id="PromoteY" type="checkbox" name="Promote" value="Y" />
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreationDate)
+        </div>
+        <div class="editor-field">
+
+            <input type="text" id="datepicker" name="CreationDate" />
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Owner)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Owner)
+            @Html.ValidationMessageFor(model => model.Owner)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Icon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Icon)
+            @Html.ValidationMessageFor(model => model.Icon)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContentSection_ID, "ContentSection")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ContentSection_ID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ContentSection_ID)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SEOUrl)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SEOUrl)
+            @Html.ValidationMessageFor(model => model.SEOUrl)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MediaSourceURL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MediaSourceURL)
+            @Html.ValidationMessageFor(model => model.MediaSourceURL)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IFrameURL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IFrameURL)
+            @Html.ValidationMessageFor(model => model.IFrameURL)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+
+        </div>
+
+        <div id="rightEditContainer">  
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BodyText)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.BodyText)
+            @Html.ValidationMessageFor(model => model.BodyText)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TeaserText)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.TeaserText)
+            @Html.ValidationMessageFor(model => model.TeaserText)
+         
+        </div>
+        </div>
+
+
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

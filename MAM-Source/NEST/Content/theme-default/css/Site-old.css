@@ -1,0 +1,344 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #0033CC;
+    background-image: url('');
+    font-size: .85em;
+    font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #333300;
+}
+   
+a:link{color: #999999; text-decoration: underline;}
+a:visited {color: #999999;}
+a:hover {color: #1d60ff;text-decoration: none;}
+a:active {color: #999999;}
+
+p, ul {margin-bottom: 20px;line-height: 1.6em;}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+div#page {
+	width:1300px;
+	height:1499px;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid #000000;
+    position: relative; 
+    overflow: auto;
+}
+
+div#leftbg{background-image:url('../images/final_landing_on_01.jpg'); background-repeat:no-repeat;
+           width:144px;height:884px; float:left; display:inline-block;position: relative;}
+div#rightbg{background-image:url('../images/final_landing_on_01.jpg'); background-repeat:no-repeat;
+           width:145px;height:884px; float:right; display:inline-block;position: relative;}
+           
+div#center{width:747px;height:272px; float:left; display:inline-block;position: relative;}
+
+div#header{background-color: #e8eef4;}
+
+#main {}
+
+div#TitleHeader{}
+
+
+div#footer {
+    margin-top:10px;
+    font-size: 10pt;
+    color: #fff;
+
+    text-align:center;
+}
+div#footer a, div#footer a:visited
+{
+    color: #888;
+}
+div#footer a:hover
+{
+    text-decoration: underline;
+    background: transparent;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------
+div#nav{
+    float:left;
+}
+------*/
+ul#menu {
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 1px;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+/*
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+*/
+
+ul#menu li a {
+    padding: 7px 18px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #000;
+
+}
+
+ul#menu li a:hover
+{
+    background-color: #3366FF;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul#menu li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"]
+{
+    border: 1px solid #999;
+    padding: 2px;
+    font-size: 1.2em;
+    width: 200px;
+    background-color: #C0C0C0;
+}
+input[type="submit"]:hover{border: 1px solid #000;}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav, 
+#menucontainer {
+    margin-top: 40px;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+#logindisplay {
+    font-size: 1.0em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    margin-top:15px;
+    color: White;
+    /*
+    visibility:hidden;
+    */
+    display:inline;
+    float:right;
+}
+
+#logindisplay a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+    font-weight:bold;
+    display:inline-block; 
+
+}
+
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+    display:inline-block; 
+
+}
+
+div .editor-label 
+{
+    display:block;
+    min-width:200px;
+}
+
+div .editor-field
+{
+    display:block;
+    min-width:200px;
+}
+
+#displayRow{display:block;}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+
+#leftEditContainer{width:200px;float:left;display:inline-block;}
+#rightEditContainer{width:500px;float:right;display:inline-block;}
+#rightEditContainer textarea{width:500px; height:500px; border-style:solid;border-color:Gray;}
+#rightEditContainer submit{float:right;}

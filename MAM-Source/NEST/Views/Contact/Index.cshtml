@@ -1,0 +1,58 @@
+﻿@model NEST.Models.Registrant
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contact";
+}
+<div>
+    <h2>To contact us, please fill out the form below.</h2>
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+   <fieldset>
+    <div id="formLeft">
+        <div class="editor-label">
+            First Name <span class="alertmessage">@Html.ValidationMessageFor(model => model.FirstName)</span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+        </div>
+        <div class="editor-label">
+           Last Name <span class="alertmessage">@Html.ValidationMessageFor(model => model.LastName)</span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+        </div>
+        <div class="editor-label">
+           Zip Code <span class="alertmessage">@Html.ValidationMessageFor(model => model.ZipCode)</span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ZipCode)
+        </div>
+        <div class="editor-label">
+            <span class="alertmessage">@Html.ValidationMessageFor(model => model.Comments)</span>
+        </div>
+        <div class="editor-field">
+            <textarea rows="10" cols="60" name="Comments" onfocus="if(this.value == 'Please enter a message or brief description of your project needs.') { this.value = ''; }">Please enter a message or brief description of your project needs.</textarea>
+        </div>
+        <p><br />
+            <input type="image" value="Join" src="@Url.Content("~/Content/theme-default/images/btn-submit.png")" />
+        </p>
+    </div>
+    <div id="formRight">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email) <span class="alertmessage">@Html.ValidationMessageFor(model => model.Email)</span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+        </div>
+        <div class="editor-label">
+            Contact Phone
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhone)<br />
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+    </div>
+    </fieldset>
+}
+</div>
+

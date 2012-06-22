@@ -1,0 +1,55 @@
+﻿@model NEST.Models.ContentBody
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ContentBody</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">BodyText</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BodyText)
+    </div>
+
+    <div class="display-label">Type</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">SubHeader</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubHeader)
+    </div>
+
+    <div class="display-label">Promote</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Promote)
+    </div>
+
+    <div class="display-label">CreationDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">Owner</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Owner)
+    </div>
+
+    <div class="display-label">ContentSection</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContentSection.Header)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

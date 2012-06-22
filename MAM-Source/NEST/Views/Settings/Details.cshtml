@@ -1,0 +1,40 @@
+﻿@model NEST.Models.Configuration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Configuration</legend>
+
+    <div class="display-label">GoogleAnalytics_ID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GoogleAnalytics_ID)
+    </div>
+
+    <div class="display-label">TwitterHandle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TwitterHandle)
+    </div>
+
+    <div class="display-label">FacebookURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FacebookURL)
+    </div>
+
+    <div class="display-label">GooglePlusURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GooglePlusURL)
+    </div>
+
+    <div class="display-label">ContributionEngine</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContributionEngine)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

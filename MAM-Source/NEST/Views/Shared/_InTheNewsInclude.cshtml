@@ -1,0 +1,27 @@
+﻿@{
+    
+    var Model = NEST.Models.RSSReader.GetRssFeed();
+}
+
+<style>
+#main-content h1{}
+#main-content h2,h3{padding-left:10px;padding-top:15px;}
+p {padding-left:10px;padding-top:3px;}
+</style>
+
+
+
+
+        @foreach (var item in Model)
+        {
+    
+    
+    
+            <h2>@Html.Encode(item.Title)</h2>
+
+            <p>@Html.Raw(item.Description)</p>
+    
+
+        }
+
+

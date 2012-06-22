@@ -1,0 +1,134 @@
+﻿@model NEST.Models.Registrant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Registrant</legend>
+
+    <div id="displayRow">
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">LastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">MI</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MI)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">Company</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">Occupation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Occupation)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">HomePhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhone)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">CellPhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CellPhone)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">Address1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address1)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">Address2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address2)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">ZipCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ZipCode)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">WebsiteURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebsiteURL)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">TwitterURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TwitterURL)
+    </div>
+    </div>
+    
+    <div id="displayRow">
+    <div class="display-label">FacebookURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FacebookURL)
+    </div>
+    </div>
+
+    <div id="displayRow">
+    <div class="display-label">LinkedInURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LinkedInURL)
+    </div>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

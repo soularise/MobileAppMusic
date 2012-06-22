@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNEST.cshtml";
+    ViewBag.Title = "Add/Edit Catalogs";
+}
+<h2>@ViewBag.Title</h2>
+
+<div>
+
+<p>Below are your Active Catalogs.  Click one to add/edit songs in that section, or @Html.ActionLink("Create New Catalog", "CreateCatalog", "ContentMaintenance").</p>
+
+<div>
+
+@Html.Partial("_CatalogList")
+
+
+</div>
+
+</div>

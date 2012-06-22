@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NESTModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="NESTV1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Configurations" EntityType="NESTModel.Configuration" />
+    <EntitySet Name="ContentBodies" EntityType="NESTModel.ContentBody" />
+    <EntitySet Name="ContentSections" EntityType="NESTModel.ContentSection" />
+    <EntitySet Name="ContentTypes" EntityType="NESTModel.ContentType" />
+    <EntitySet Name="Registrants" EntityType="NESTModel.Registrant" />
+    <AssociationSet Name="FK_ContentSectionContentBody" Association="NESTModel.FK_ContentSectionContentBody">
+      <End Role="ContentSections" EntitySet="ContentSections" />
+      <End Role="ContentBodies" EntitySet="ContentBodies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContentSectionContentType" Association="NESTModel.FK_ContentSectionContentType">
+      <End Role="ContentTypes" EntitySet="ContentTypes" />
+      <End Role="ContentSections" EntitySet="ContentSections" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Configuration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GoogleAnalyticsAccount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TwitterAccount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FacebookPage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GooglePlusPage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SiteTitle" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TagLine" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BlogLink" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RSSFeed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TwitterAnywhereAPIKey" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WebsiteDomainName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LinkedInPage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ICOImage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PromotedArticleID" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContentBody">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BodyText" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SubHeader" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Promote" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreationDate" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Owner" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ContentSection_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ContentSection" Relationship="NESTModel.FK_ContentSectionContentBody" FromRole="ContentBodies" ToRole="ContentSections" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="String" Name="Icon" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="SEOUrl" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="TeaserText" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="MediaSourceURL" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="IFrameURL" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="IncludePageHeader" MaxLength="10" FixedLength="true" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="TitleSize" FixedLength="true" Unicode="true" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="SubHeaderSize" MaxLength="2" FixedLength="true" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="ExtraText" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContentSection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreationDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ContentTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ContentBodies" Relationship="NESTModel.FK_ContentSectionContentBody" FromRole="ContentSections" ToRole="ContentBodies" />
+    <NavigationProperty Name="ContentType" Relationship="NESTModel.FK_ContentSectionContentType" FromRole="ContentSections" ToRole="ContentTypes" />
+    <Property Type="Int32" Name="RegistrantId" />
+    <Property Type="String" Name="Active" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Private" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Behavior" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ContentSections" Relationship="NESTModel.FK_ContentSectionContentType" FromRole="ContentTypes" ToRole="ContentSections" />
+  </EntityType>
+  <EntityType Name="Registrant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MI" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="Company" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="Occupation" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="CellPhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="Address2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="City" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="State" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="WebsiteURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="TwitterURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="FacebookURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Name="LinkedInURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ContentSectionContentBody">
+    <End Role="ContentSections" Type="NESTModel.ContentSection" Multiplicity="1" />
+    <End Role="ContentBodies" Type="NESTModel.ContentBody" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContentSections">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContentBodies">
+        <PropertyRef Name="ContentSection_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContentSectionContentType">
+    <End Role="ContentTypes" Type="NESTModel.ContentType" Multiplicity="1" />
+    <End Role="ContentSections" Type="NESTModel.ContentSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContentTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContentSections">
+        <PropertyRef Name="ContentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,58 @@
+﻿@model NEST.Models.ContentBody
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ContentBody</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">BodyText</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BodyText)
+    </div>
+
+    <div class="display-label">Type</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">SubHeader</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubHeader)
+    </div>
+
+    <div class="display-label">Promote</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Promote)
+    </div>
+
+    <div class="display-label">CreationDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">Owner</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Owner)
+    </div>
+
+    <div class="display-label">ContentSection</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContentSection.Header)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "../ContentMaintenance/GetSectionItems", new { id = Model.ContentSection_ID })
+    </p>
+}

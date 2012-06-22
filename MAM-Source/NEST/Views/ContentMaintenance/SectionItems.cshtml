@@ -1,0 +1,105 @@
+﻿@model IEnumerable<NEST.Models.ContentBody>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+	
+	<script src="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/jquery-1.7.1.js")"></script>
+	<script src="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/ui/jquery.ui.core.js")"></script>
+	<script src="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/ui/jquery.ui.widget.js")"></script>
+	<script src="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/ui/jquery.ui.mouse.js")"></script>
+	<script src="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/ui/jquery.ui.sortable.js")"></script>
+    <!--
+    <link rel="stylesheet" href="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/themes/base/jquery.ui.all.css")">
+	<link rel="stylesheet" href="@Url.Content("~/scripts/jquery-ui-1.8.17.custom/development-bundle/demos/demos.css")">
+    -->
+	<style>
+	#sortable { list-style-type: none; margin: 0; padding: 0; width: 750px; }
+	#sortable li { margin: 3px 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 12px; height: 40px; width: 750px;}
+	#sortable li span { position: absolute; margin-left: -1.3em; }
+	#sortable li a { font-size: 12px; text-decoration:underline;}
+	#sortable li a:hover { font-size: 12px; text-decoration:none;}
+	.alert {color:Red;}
+	</style>
+	<script>
+	    $(document).ready(function () {
+	        $("#sortable").sortable({
+	            update: function (event, ui) {
+	                $("ul#sortable li").each(function () {
+	                    var position = $("ul#sortable li").index(this)+1;
+	                    var section = $(this).attr("id");
+	                    //alert("position: " + position + " item id: " + section);
+	                    $.post("../UpdateSort", { position: position, section: section });
+	                })
+	                //location.reload();
+	            }
+	        }).disableSelection();
+	    });	    
+        
+        //$(function () {
+	    //    $("#sortable").sortable();
+	    //    $("#sortable").disableSelection();
+	    //});
+	</script>
+
+
+<h2>@ViewBag.SectionTitle Section Content Items</h2>
+<p>@ViewBag.Sort</p>
+<p>
+    @Html.ActionLink("Create New", "../ContentDetails/Create")
+</p>
+<!--
+<table width="800">
+    <tr>
+        <th style="width:60%;">
+            Title
+        </th>
+        <th>
+            Owner
+        </th>
+        <th>
+            Section
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentSection.Header)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "../ContentDetails/Edit", new { id=item.Id }) | @Html.ActionLink("Delete", "../ContentDetails/Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+<br /><br /><br />
+COMING SOON - DRAG & DROP REORDERING:<br /><br />
+-->
+<p>Drag the items below to resort their order. <a href="">Click here to refresh the view</a>.</p>
+<div class="demo">
+
+<ul id="sortable">
+@{
+    int i = 1;
+foreach (var item in Model)
+{
+    
+	<li class="ui-state-default" id="@item.Id"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>@item.Title (position: @item.SortOrder)  <div style="width:750px;text-align:right;">@Html.ActionLink("Edit", "../ContentDetails/Edit", new { id = item.Id }) | @Html.ActionLink("Delete", "../ContentDetails/Delete", new { id = item.Id })</div></li>
+    i++;
+}
+
+}
+</ul>
+
+</div>

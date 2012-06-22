@@ -1,0 +1,125 @@
+﻿<%
+CampaignID	3662
+UserID	59156
+Credentials String	kf/+PZGYJHQ4xszerdNwtq3HQOcrmvuusLoQ/xHoV14=
+
+
+' EMAIL SIGNUP NGP WEB SERVICE INTERFACE
+'
+Dim MyRequest, url, Post, strCredntials, strEmail, strFirstName, strLastName, strZip
+'
+strFromContactForm = request.querystring("FromContactForm")
+if strFromContactForm = "Y" then
+	' use the session vals
+	strEmail = session("Email")
+	strFirstName = session("FirstName") 
+	strLastName = session("LastName") 
+	strZip = session("Zip") 
+else
+	strEmail = trim(request.form("Email"))
+	strEmail = lcase(strEmail)
+	strFirstName = trim(request.form("FirstName"))
+	strLastName = trim(request.form("LastName"))
+	strZip = trim(request.form("Zip"))
+end if
+'
+'''''
+	' add them to ngp
+	Dim xmlhttp
+	set xmlhttp = server.Createobject("MSXML2.ServerXMLHTTP")
+	
+	MyRequest = MyRequest & "<lastName>"&server.HTMLEncode(strLastName)&"</lastName>"
+	MyRequest = MyRequest & "<firstName>"&server.HTMLEncode(strFirstName)&"</firstName>"
+	MyRequest = MyRequest & "<email>"&server.HTMLEncode(strEmail)&"</email>"
+	MyRequest = MyRequest & "<zip>"&server.HTMLEncode(strZip)&"</zip>"
+	'
+	' credentials
+	strCredntials = "duM5MtlGK2r2BjLYiUHmakmz8lVAixAgIMZWoJQekFyKoM8pCsRfy6BIOD0IuzbbHlU1WBcrDidO9bFAC+utCA=="
+	'
+	url = "https://services.myngp.com/ngponlineservices/onlinecontribservice.asmx"
+	'
+	' create the soap envelope and add request to it
+	Post = "<soap:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'"
+	Post = Post & " xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>"
+	Post = Post & "<soap:Body><EmailSignUp xmlns='http://ngpsoftware.com/NGP.Services.UI/OnlineContribService'>"
+	Post = Post & "<credentials>duM5MtlGK2r2BjLYiUHmakmz8lVAixAgIMZWoJQekFyKoM8pCsRfy6BIOD0IuzbbHlU1WBcrDidO9bFAC+utCA==</credentials>" & MyRequest &"</EmailSignUp>"
+	Post = Post & "</soap:Body></soap:Envelope>"
+	'
+	xmlhttp.open "POST", url, False
+	xmlhttp.setRequestHeader "Content-Type", "text/xml; charset=utf-8"
+	xmlhttp.setRequestHeader "SOAPAction","http://ngpsoftware.com/NGP.Services.UI/OnlineContribService/EmailSignUp"
+	xmlhttp.setRequestHeader "Content-Length", len(post)
+	xmlhttp.send Post
+	'
+	strStatus = xmlhttp.status
+	strStatusText = xmlhttp.statusText
+	strResponseText = cstr(xmlhttp.responseText)
+	set xmlhttp = nothing
+''''
+'
+
+response.redirect("JoinThanks.asp")
+
+
+'response.Write ("xmlhttp.statusText: " + strStatusText + "<br>")
+'response.Write ("xmlhttp.status: " + cstr(strStatus) + "<br>")
+'response.Write ("xmlhttp.responseText: " + strResponseText + "<br>")
+%>
+
+
+<link href="https://help.ngphost.com/sites/default/files/ngp-fb-520.css" rel="stylesheet" type="text/css" media="screen"/>
+
+<div class="NGP-FB-Wrapper">
+
+  <div class="NGP-FB-Header">
+    <a href="[URL of your donation page]" title="Donate to Lefty!">
+      <img src="[URL of your header image]" width="520" height="110" alt="Donate to Lefty!" />
+    </a>
+  </div>
+
+  <div class="NGP-FB-Content">
+  
+    <div class="NGP-FB-DonateBox">
+      <p>I'm a huge fan of Lefty, and I thought I'd make it really easy to donate to Lefty. Just use this form below. Please contribute so we can get our message out and win the campaign.</p>
+
+      <form action="https://services.myngp.com/ngponlineservices/contribution.aspx" method="GET" target="_blank">
+        <div>
+          <input type="hidden" name="X" value="uA%2fPV9zPNW3QBXhi7YnwUMsdGLWDQL79tmWXbICbt9g=" />
+
+          <div class="NGP-FB-RadioButtons">
+            <div><input type="radio" name="a" value="25" /> $25.00</div>
+            <div><input type="radio" name="a" value="50" /> $50.00</div>
+            <div><input type="radio" name="a" value="100" /> $100.00</div>
+            <div><input type="radio" name="a" value="125" /> $125.00</div>
+            <div><input type="radio" name="a" value="150" /> $150.00</div>
+            <div><input type="radio" name="a" value="500" /> $500.00</div>
+            <div><input type="radio" name="a" /> Other</div>
+          </div>
+
+          <div class="NGP-FB-TextAreas">
+            <label for="f">First Name</label><input type="text" name="f" id="f" />
+            <label for="l">Last Name</label><input type="text" name="l" id="l" />
+            <label for="z">Zip</label><input type="text" name="z" id="z" />
+            <label for="e">Email</label><input type="text" name="e" id="e" />
+          </div>
+
+          <input class="submit" type="submit" value="Contribute" />
+
+        </div>
+      </form>
+
+    </div>
+
+    <h1>Make a contribution today!</h1>
+
+    <p>Like many Americans, Lefty was born to a poor, but very close family of donkeys in southwest New Mexico. His mother, Jenny Burr O., grew up in a tiny town on the Mexican border and worked most of her years as a herding animal on a farm before immigrating to America. Lefty's father, Jack, came from a long line of pack mules in the Old West gold mines during the mining rush of the nineteenth century. Jack was intimately familiar with manual labor as he toiled as a cog in the wheel, spinning wheels at a grist mill in western California!</p>
+    
+    <p>...</p>
+
+    <p>Won't you help Lefty with his next chapter, and yours?</p>
+
+  </div>
+
+  <div style="height:1px;">&nbsp;</div>
+
+</div>

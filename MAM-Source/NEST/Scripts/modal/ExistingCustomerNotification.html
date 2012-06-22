@@ -1,0 +1,35 @@
+
+<link type='text/css' href='css/demo.css' rel='stylesheet' media='screen' />
+<link type='text/css' href='css/confirm.css' rel='stylesheet' media='screen' />
+
+<!-- Load JavaScript files -->
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/confirm.js'></script>
+
+<div id='container'>
+	<div id='content'>
+		<!-- modal content -->
+		<div id='confirm'>
+			<div class='header'><span>Please Confirm</span></div>
+		<div class='message'><p>We have found no customers in our database with a matching social security number. However, we have found a current customer with a name and address very similar to yours. In an attempt to not duplicate customer information, please confirm that the information below is for you.</p>
+<p><b>Name:</b> <%=session("FirstName")%>  <%=session("LastName")%></p>
+<p><b>Address:</b> <%=session("Address1")%></p>
+<p><b>City:</b> <%=session("ZipCode")%></p>
+<p><b>ZipCode:</b> <%=session("ZipCode")%>
+<%if session("ZipCode2") <> "" then response.write("-"&session("ZipCode2"))%>
+</p>
+
+<p style="text-align:center;font-size:12pt;font-weight:bold;">Is this your information?</p>
+</div>
+			<div class='buttons'>
+				<div class='no simplemodal-close'>No</div><div class='yes'>Yes</div>
+			</div>
+		</div>
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='img/confirm/header.gif' alt='' />
+			<img src='img/confirm/button.gif' alt='' />
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LandingConfig>
+  <!-- The title of this website -->
+  <SiteTitle>mobile app music for iphone, android, gaming, audio branding</SiteTitle>
+  <Tagline>distinct audio branding, soundmarks, and themes - for mobile and beyond</Tagline>
+  <LogoUrl></LogoUrl>
+  <ICOImage></ICOImage>
+  <!-- URL for your blog -->
+  <BlogLink>http://soularisemusic.blogspot.com</BlogLink>
+  <!-- URL for the RSS feed (preferably using Feedburner.com)  -->
+  <RssFeed>http://feeds.feedburner.com/soularise</RssFeed>
+  <!-- To get your Twitter Anywhere API Key:
+        1) Go to https://dev.twitter.com/anywhere/apps/new
+        2) Register your app (Callback URL doesn't matter)
+        3) Copy your API Key here...
+    -->
+  <TwitterAnywhereAPIKey>CRNcBwDUGkvcHDekxQR4w</TwitterAnywhereAPIKey>
+  <TwitterAccount>soularise</TwitterAccount>
+  <FacebookPage>http://www.facebook.com/soularise</FacebookPage>
+  <!-- Your Google Analytics account as in UA-22616491-2 -->
+  <GoogleAnalyticsAccount>UA-1974282-1</GoogleAnalyticsAccount>
+  <!-- website domain name -->
+  <WebsiteDomainName>mobileappmusic.com</WebsiteDomainName>
+  <!-- The promoted article is the default shown on the home page  -->
+  <PromotedArticleID>5</PromotedArticleID>
+  <DefaultCatalogCategory>ROCK</DefaultCatalogCategory>
+  <!-- The message that displays after someone joins the mailing list  -->
+  <JoinThanksMessage>Thank you for joining. Your info will not be abused - ever.</JoinThanksMessage>
+</LandingConfig>

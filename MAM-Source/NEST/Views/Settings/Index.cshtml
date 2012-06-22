@@ -1,0 +1,65 @@
+﻿@model IEnumerable<NEST.Models.Configuration>
+
+@{
+    ViewBag.Title = "General Configuration Settings";
+}
+
+<h2>General Configuration Settings</h2>
+
+<table width="350">
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <th>
+            Google Analytics ID
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.GoogleAnalytics_ID)
+        </td>
+</tr>
+<tr>
+        <th>
+            Twitter Handle
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwitterHandle)
+        </td>
+</tr>
+<tr>
+        <th>
+            Facebook URL
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacebookURL)
+        </td>
+</tr>
+<tr>
+        <th>
+            GooglePlus URL
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.GooglePlusURL)
+        </td>
+</tr>
+<tr>
+        <th>
+            Contribution Engine
+        </th>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.ContributionEngine)
+        </td>
+</tr>
+<tr>
+        
+        <th style="float:right;" colspan="2">
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+        </th>
+</tr>
+}
+
+
+
+</table>

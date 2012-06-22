@@ -1,0 +1,103 @@
+﻿@model NEST.Models.Registrant
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Registrant</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">MI</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MI)
+    </div>
+
+    <div class="display-label">Company</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company)
+    </div>
+
+    <div class="display-label">Occupation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Occupation)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">HomePhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhone)
+    </div>
+
+    <div class="display-label">CellPhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CellPhone)
+    </div>
+
+    <div class="display-label">Address1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address1)
+    </div>
+
+    <div class="display-label">Address2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address2)
+    </div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">ZipCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ZipCode)
+    </div>
+
+    <div class="display-label">WebsiteURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebsiteURL)
+    </div>
+
+    <div class="display-label">TwitterURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TwitterURL)
+    </div>
+
+    <div class="display-label">FacebookURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FacebookURL)
+    </div>
+
+    <div class="display-label">LinkedInURL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LinkedInURL)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

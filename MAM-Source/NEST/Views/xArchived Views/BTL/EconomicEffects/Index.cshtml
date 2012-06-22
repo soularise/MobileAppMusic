@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "EconomicEffects";
+    Layout = "~/Views/Shared/_SiteMasterLayoutSubPage.cshtml";
+}
+@model NEST.Models.ContentBody
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+
+
+
+
+
+<div id="pageContent">
+@Html.Raw(Model.BodyText)
+
+
+
+
+
+
+
+
+</div>

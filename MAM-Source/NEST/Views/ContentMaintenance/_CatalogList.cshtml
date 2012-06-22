@@ -1,0 +1,19 @@
+﻿<table width="65%">
+    <tr >
+        <th colspan="2">
+            <h2>Catalogs</h2>
+        </th>
+    </tr>
+
+@foreach (var item in ViewData.Model) {
+    <tr style="height:50px;background-color:#D6D6D6;">
+        <td>
+            <b style="padding-left:10px;">@item.Header</b>
+        </td>
+        <td style="text-align:right; padding-right:10px;">
+             @Html.ActionLink("Add/Edit Catalog Songs", "../ContentMaintenance/GetSectionItems", new { id=item.Id }) | @Html.ActionLink("Edit Catalog", "../ContentMaintenance/Edit", new { id=item.Id }) | @Html.ActionLink("Delete", "../ContentMaintenance/Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

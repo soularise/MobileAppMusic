@@ -1,0 +1,29 @@
+﻿
+
+ @{           
+     NEST.Models.NESTV1Entities db2 = new NEST.Models.NESTV1Entities();
+
+
+     var contentbodies = db2.ContentBodies.Where(c => c.ContentSection_ID == 7).OrderBy(s => s.SortOrder);
+     contentbodies.ToList();     
+
+
+    int j = 1;
+    foreach (var mediaItem in contentbodies) 
+
+{
+    if(j <= 3)
+    {
+           
+        <h2>@mediaItem.Title</h2>
+        <h3>@mediaItem.SubHeader</h3><br />
+        <iframe width="300" height="225" src="@mediaItem.MediaSourceURL" frameborder="0" allowfullscreen></iframe>
+        
+
+        <br /><br />   <br /><br /> 
+     
+        j++;
+    }
+}
+}
+

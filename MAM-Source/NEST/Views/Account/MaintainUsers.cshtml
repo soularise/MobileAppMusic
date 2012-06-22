@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "User Maintenance";
+}
+
+<h2>Current Admin Users</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Register") authorized NEST CMS user...
+</p>
+<table>
+    <tr>
+        <th>
+            User Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>Password</th>
+    </tr>
+
+@foreach (var item in ViewData.Model) {
+    <tr>
+        <td>
+            @item.UserName
+        </td>
+        <td>
+            @item.Email
+        </td>
+        <td>
+            @Html.ActionLink("Change Password", "ChangePassword", new { id = item.ProviderUserKey }) 
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<NEST.Models.RSSModel>
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<style>
+#main-content h1{}
+#main-content h2,h3{padding-left:10px;padding-top:15px;}
+p {padding-left:10px;padding-top:3px;}
+</style>
+
+<h1>@ViewBag.Title</h1>
+<div class="main-inner">
+    <div id="main-content" class="radius"> 
+        <div class="left-large-container">
+        @foreach (var item in Model)
+        {
+    
+    
+    
+            <h2>@Html.Encode(item.Title)</h2>
+
+            <p>@Html.Raw(item.Description)</p>
+    
+
+        }
+        </div>
+        <div class="right-small-container">
+
+        @RenderPage("~/views/shared/_PromotedContent.cshtml")
+
+        </div>
+    </div>
+</div>

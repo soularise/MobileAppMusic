@@ -1,0 +1,20 @@
+﻿@model IEnumerable<NEST.Models.ContentBody>
+
+@{
+    ViewBag.Title = "Multimedia";
+    Layout = "~/Views/Shared/_SiteMasterSubpageLayout.cshtml";
+
+}
+
+
+<h1>Multimedia</h1>
+
+@foreach (var item in Model) {
+           
+   
+    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+    <p>@Html.Raw(item.BodyText)</p>
+
+
+
+}

@@ -1,0 +1,36 @@
+﻿<div class="home-intro-container">
+
+     @{           
+         NEST.Models.NESTV1Entities db2 = new NEST.Models.NESTV1Entities();
+
+
+         var contentbodies = db2.ContentBodies.Where(c => c.SEOUrl == "intro");
+         contentbodies.ToList();     
+
+
+        int j = 1;
+        foreach (var introItem in contentbodies) 
+
+    {
+        if(j <= 3)
+        {
+           
+   
+        <h4>@Html.DisplayFor(model => introItem.Title)</h4>
+
+        @Html.Raw(introItem.BodyText)   
+        
+         if(j==1)
+         {
+         //@Html.Partial("~/views/shared/_homePageButtons.cshtml")    
+         <hr noshade="noshade" /> 
+         }
+         
+        
+            j++;
+        }
+    }
+    }
+    
+
+</div>

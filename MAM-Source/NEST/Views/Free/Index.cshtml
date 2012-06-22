@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Free";
+}
+@model NEST.Models.ContentBody
+           
+
+
+<h3>@Html.DisplayFor(model => model.Title)</h3>
+
+@Html.Raw(Model.BodyText)          
+
+

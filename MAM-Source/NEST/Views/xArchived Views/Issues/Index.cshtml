@@ -1,0 +1,46 @@
+﻿@model IEnumerable<NEST.Models.ContentBody>
+@{
+    Layout = "~/Views/Shared/_SiteMasterSubpageLayout.cshtml";
+    ViewBag.Title = "Issues";
+}
+
+
+<h1>@ViewBag.Message</h1>
+
+<div class="content-list" style="padding-top:0px;padding-left:0px;">
+    <ul style="width:300px;">
+        <li></li>
+
+
+@{
+    int i = 1;
+    foreach (var item in Model)
+{
+        if(i == 8){ 
+    
+            @Html.Raw("</ul><ul style='padding-left:40px;width:300px;'><li></li>")    
+        }
+        var tmpTitle = item.Title; 
+        if(item.Id == 23){
+           // tmpTitle = item.Title.Replace("&","&<br>");
+           // tmpTitle = tmpTitle.Replace("/", "/<br />");
+        }
+        var tmpSubHead = item.SubHeader.Replace("Non Display", "Subheading Goes Here");
+        <li class="two-lines"><img src="@Url.Content("~/Content/theme-pm/images/icons/")@item.Icon" style="padding-bottom:10px;" /><a href="@Url.Content("~/Issues/IssuesDetail/")@item.Id" style="line-height:16px;padding-top:10px;padding-bottom:5px;">@Html.Raw(tmpTitle)</a>
+        <p style="line-height:14px;padding-top:4px;padding-bottom:2px;font-size:9pt;">@Html.Raw(tmpSubHead)</p></li>
+        <li></li>
+        i++;
+}
+}
+
+    </ul>
+</div>
+    
+
+    
+    
+    
+    
+    
+    
+    

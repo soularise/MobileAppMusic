@@ -1,0 +1,28 @@
+﻿@model IEnumerable<NEST.Models.ContentBody>
+
+@{
+    ViewBag.Title = "Video";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div id="TitleDiv">
+<h1>@ViewBag.Title</h1>
+</div>
+<div class="main-inner">
+    <div id="main-content" class="radius">
+
+
+
+    @foreach (var item in Model) {
+           
+   
+        <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+        <h3>@Html.DisplayFor(modelItem => item.SubHeader)</h3>
+        <p>@Html.Raw(item.BodyText)</p>
+
+
+
+    }
+
+    </div>
+</div>

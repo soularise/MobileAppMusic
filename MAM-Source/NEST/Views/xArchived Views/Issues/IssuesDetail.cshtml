@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutIssues.cshtml";
+    ViewBag.Title = "Issues";
+}
+@model NEST.Models.ContentBody
+<style>
+#main-content ul {
+    /*giving OL's LIs generated numbers*/
+    list-style:disc outside none;
+    margin-bottom:10px;
+}
+#main-content li {
+    /*giving UL's LIs generated disc markers*/
+    
+    display:list-item;
+    width:550px;
+    padding-left:0px;
+    margin-left:50px;
+    
+}
+#main-content h1{}
+#main-content h2,h3{padding-left:10px;padding-top:15px;}
+
+
+#issueDetail{padding:30px;}
+
+#issueDetail #left{float:left;display:inline; width:65px;}
+#issueDetail #right{float:left;display:inline; width:500px;}
+
+#issueDetail h1{color:#1874CD;padding-top:15px;}
+#issueDetail p {padding-top:0px;padding-bottom:0px;}
+</style>
+@{
+    var tmpSubHead = Model.SubHeader.Replace("Non Display", "Subheading Goes Here");
+
+}
+<h1>ISSUES</h1>
+
+<div id="issueDetail">
+<div style="width:100%;display:block;"><div id="left"><img src="@Url.Content("~/Content/theme-pm/images/icons/")@Model.Icon"/></div><div id="right"><h1 style="background-image:none;">@Html.DisplayFor(model => model.Title)</h1></div></div>
+
+
+<br /><br /><br /><br />
+<h2>@Html.Raw(tmpSubHead)</h2>
+@Html.Raw(Model.BodyText)   
+
+</div>

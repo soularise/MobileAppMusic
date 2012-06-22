@@ -1,0 +1,40 @@
+﻿@model NEST.Models.ContentBody
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    if(Model.BodyText.Contains("[NO HEADER]")){
+        ViewBag.Title = "";
+    }
+}
+<style>
+#main-content ul {
+    /*giving OL's LIs generated numbers*/
+    list-style:disc outside none;
+    margin-bottom:10px;
+}
+#main-content li {
+    /*giving UL's LIs generated disc markers*/
+    
+    display:list-item;
+    width:550px;
+    padding-left:0px;
+    margin-left:50px;
+    
+}
+#main-content h1{}
+#main-content h2,h3{padding-left:10px;padding-top:15px;}
+#main-content p {padding-top:0px;padding-bottom:0px;}
+</style>
+<h1>@ViewBag.Title</h1>
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+
+<h3>@Html.DisplayFor(model => model.SubHeader)</h3>
+<div style="padding-left:0px;">
+    <div align="right"><iframe src="//www.facebook.com/plugins/like.php?href=@Url.Content("~/news/NewsDetails/")@Model.Id&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
+    <!--<a href="https://twitter.com/share" class="twitter-share-button" data-url="@Url.Content("~/news/NewsDetails/")@Model.Id" data-text="@Model.Title)">Tweet</a>
+    <script>        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+    -->
+    </div>
+@Html.Raw(Model.BodyText.Replace("[NO HEADER]", ""))
+</div>

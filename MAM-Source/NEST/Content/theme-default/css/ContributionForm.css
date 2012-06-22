@@ -1,0 +1,594 @@
+﻿input, select, textarea { font-size: 12px; font-family: Arial, sans-serif; margin: 2px 0; }
+input[type="text"], select, textarea
+{
+	padding: 4px; 
+	border: 1px solid #d4d4d4; 
+	color: #626262;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus, input.focus, select.focus, textarea.focus
+{
+	padding: 3px;
+	border: 2px solid #091B45;
+}
+
+select { padding: 4px 1px 4px 4px; }
+button { border: 0; background: transparent; }
+ul.validation-summary-errors { list-style: none; }
+
+.clear { clear: left; }
+.error { color: red; }
+
+p.instructions 
+{
+	font-size: 11px;
+	margin: 10px 0;
+}
+
+#sandbox { background: #008; border-bottom: 0.5em solid #44a; font-size: 16pt; font-weight: normal; text-align: center; line-height: 24pt; height: 24pt; margin-bottom: 0.5em; color: white; }
+#shell  
+{
+	width: 600px; 
+	padding: 0px 0 0px; 
+	margin: 0 auto;
+}
+#shell2 { text-align: center; }
+#logo img { max-width: 740px; }
+#page  
+{
+	text-align: left; 
+	position: relative; 
+	border: 1px solid #DDDDDD; 
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;	
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+	background: white url(https://secure.piryx.com/images/v2/bg-header.gif) repeat-x top left; 
+}
+
+#heading  
+{
+	position: relative; 
+	text-align: center; 
+	padding: 10px 0;
+	border-bottom: 1px solid #E6E6E6;
+	margin: 0 30px 10px 30px;
+}
+#heading h1  
+{
+	font-size: 22px; 
+	color: #072E3B;
+}
+#heading a  
+{
+	font-size: 13px; 
+	font-weight: bold; 
+	color: #636363; 
+	text-decoration: none; 
+}
+#heading a:hover { text-decoration: underline; }
+
+#message { font-size: 12px; margin: 10px 30px; }
+#message p { margin: 0 0 1em; }
+
+#message a 
+{
+	color: #063156;
+	font-weight: bold;
+}
+
+label{font-size:12pt;}
+
+#personal-information label, #employment-information label, #payment-information label, #billing-information label, #legal-compliance label
+{
+	font-family: arial; 
+	color:#000000;
+}
+
+#legal-compliance label
+{
+	text-transform: uppercase;
+}
+
+span.req 
+{
+	width: 10px;
+	height: 12px;
+	font-size: 1px;
+	text-indent: -999em;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(https://secure.piryx.com/images/v2/icon-required.png) no-repeat top left;
+	margin: 0 0 0 3px;
+}
+
+#amount ul
+{
+	border: 0px solid #C7C7C7;
+
+	padding: 8px 14px;
+}
+
+#amount ul li 
+{
+	color: #7B7B7B;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+}
+
+#amount ul.amounts.no-captions
+{
+	padding: 8px;
+}
+
+#amount ul.amounts.no-captions li
+{
+	float: left;
+	text-align: center;
+	width: 84px;
+	font-weight: bold;
+}
+
+#amount ul.amounts.no-captions li.clear
+{
+	float: none;
+	clear: left;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	line-height: 1px;
+	font-size: 1px;
+}
+
+ul.amounts.no-captions #customAmount
+{
+	width: 40px;
+}
+
+#amount ul span.amount
+{
+	color: #081B45;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.buttons
+{
+	margin: 10px 0;
+}
+
+#billing-information .same label
+{
+	text-transform: uppercase;
+}
+
+#disclaimer, #contribution-type, #legal-compliance
+{
+	font-size: 12px;
+	line-height: 18px;
+	color: #777777;
+}
+
+#disclaimer  
+{
+	margin: 10px 30px;
+}
+#disclaimer p { margin: 0.5em 0; }
+
+#legal-compliance p { margin-left: 20px; }
+
+#paid-for-message 
+{ 
+	/* background: transparent url(/images/v2/bg-footer.gif) repeat-x top left; */
+	position: relative; 
+	margin: 10px 30px 0 30px;
+	padding: 10px 0;
+	border-top: 1px solid #E7E7E7; 
+	min-height: 24px;
+}
+#paid-for-message span  
+{
+	border: 1px solid #606060; 
+	float: left; 
+	padding: 4px 6px; 
+	display: block; 
+	line-height: 18px; 
+	margin-right: 190px;
+	text-align: center;
+	color: #424242;
+	font-size: 12px; 
+	font-weight: bold;
+}
+
+a.secure { position: absolute; right: 0; top: 10px; text-decoration: none; color: black; }
+.secure img { border: 0; vertical-align:middle; }
+
+
+p.confirmation { border: 1px solid #00C00C; background: #D1F6CB url(https://secure.piryx.com/images/confirmation.gif) no-repeat 8px 50%; font-size: 11px; line-height: 1.5em; padding: 8px 8px 8px 32px; margin: 0.5em 27px; }
+
+#contribution-type label { text-transform: none; }
+
+#scheduled-dates .remove, #add-scheduled-date { cursor: pointer; }
+#scheduled-dates .scheduled-date { padding: 0.5em 0; }
+#scheduled-dates .scheduled-date * { vertical-align: middle; }
+
+#error-summary
+{
+	border: 1px solid #DA0F0F;
+	background: #FFEDED;
+	padding: 10px;
+	margin: 10px 30px;
+	color: black;
+	text-align: center;
+}
+
+#error-summary p
+{
+	font-weight: bold;
+	color: #D80000;
+	margin: 0 0 10px;
+}
+
+.piryx-donation-form { margin-top:0px;background-color:#ffffff; width: 700px; margin-left:30px; margin-right:0px;
+                       
+ 	padding: 0px; 
+	border: 0px solid #d4d4d4; 
+	color: #626262;
+	float:left;
+                  
+                       
+ }
+.piryx-donation-form ul.fields li { list-style: none; }
+
+.piryx-donation-form ul.fields li { height: 4em; }
+.piryx-donation-form ul.fields { position: relative; }
+
+#personal-information{margin-top:10px;}
+
+#personal-information ul.fields { height: 225px; }
+#personal-information .first-name { top: 0; left: 0; }
+#personal-information .middle-name { top: 0; left: 179px; }
+#personal-information .last-name { top: 0; left: 358px; }
+#personal-information .email { top: 45px; left: 0; }
+#personal-information .phone { top: 45px; left: 358px; }
+#personal-information .work-phone { top: 90px; left: 358px; }
+#personal-information .fax-phone { top: 135px; left: 358px; }
+#personal-information .mobile-phone { top: 180px; left: 358px; }
+#personal-information .address1 { top: 90px; left: 0; }
+#personal-information .address2 { top: 135px; left: 0; }
+#personal-information .city { top: 165px; left: 0; }
+#personal-information .state { top: 165px; left: 179px; }
+#personal-information .zip { top: 165px; left: 236px; }
+
+#personal-information .first-name input,
+#personal-information .middle-name input,
+#personal-information .last-name input,
+#personal-information .city input { width: 157px; }
+#personal-information .state input { width: 40px; }
+#personal-information .zip input { width: 90px; }
+#personal-information .address1 input, #personal-information .address2 input, #personal-information .email input, 
+    #personal-information .phone input, #personal-information .work-phone input, 
+    #personal-information .fax-phone input, #personal-information .mobile-phone input { width: 250px; }
+#personal-information .address2 label,
+#personal-information .address2 br { display: none; }
+
+#amount ul { margin-bottom: 8px; }
+#amount li { list-style: none; line-height: 25px; font-size: 14px;  }
+#amount li * { vertical-align: middle; }
+#amount li label { font-weight: normal; text-transform: none; }
+
+.section ul.fields { position: relative; }
+.section ul.fields li { position:absolute; list-style: none; }
+
+#employment-information ul { height: 90px; }
+#employment-information input { width: 250px; }
+#employment-information .notice { top: 45px; left: 0; }
+.occupation, .spouse-law-firm, .parent-2-law-firm { left: 358px; }
+.job-title, .spouse-law-firm { top: 45px; }
+.parent-1-law-firm, .parent-2-law-firm { top: 30px; }
+.judicial-notice { top: 45px; display:none;}
+
+#donation-information { position: relative; min-height: 475px; }
+* html #donation-information { height: 475px; }
+
+#amount { width: 270px; min-height: 120px; }
+
+#contribution-type label { text-transform: none; font-weight: normal; }
+#contribution-type li { list-style: normal; }
+
+#contribution-type div{ padding-left:10px; margin-top:40px;}
+
+.piryx-donation-form .buttons { text-align: center; }
+
+#payment-information { width: 270px; position:absolute; top: 0px; left: 370px; }
+#cc-info .expiration label { display: none; }
+#cc-info .card-number input { width: 116px; }
+#cc-info .card-number, #cc-info .cvv2,
+#cc-info .expiration .month, #cc-info .expiration .year { float: left; margin-right: 4px; }
+#cc-info .expiration select { width: 60px; }
+ul.card-type li { list-style: none; float: left; margin-right: 8px; }
+
+#cc-info, #echeck-info { clear: both; margin: 0 4px; padding: 4px 0 0; }
+
+#echeck-info .routing-number, #echeck-info .account-number { float: left; margin-right: 1px; }
+#echeck-info .help { clear: left; }
+#echeck-info .routing-number input, #echeck-info .account-number input { width: 147px; margin: 0; }
+
+#echeck-info li, #cc-info li { list-style: none; margin-bottom: 6px; }
+
+#billing-information { width: 270px; height: 300px; position:absolute; top: 320px; left: 10px; }
+#billing-information .address1 { top: 20px; left: 0; }
+#billing-information .address2 { top: 65px; left: 0; }
+#billing-information .city { top: 95px; left: 0; }
+#billing-information .state { top: 95px; left: 179px; }
+#billing-information .zip { top: 95px; left: 236px; }
+#billing-information .city input { width: 157px; }
+#billing-information .state input { width: 40px; }
+#billing-information .zip input { width: 90px; }
+#billing-information .address1 input, #billing-information .address2 input { width: 230px; }
+#billing-information .address2 label,
+#billing-information .address2 br { display: none; }
+
+#legal-compliance { font-size: 12px; line-height: 18px; }
+#legal-compliance p { margin-left: 20px; }
+
+#customAmount { width: 60px; }
+
+.card-type input { float: left; margin: 3px 4px 0 0; }
+.card-type span { background-image: url(https://secure.piryx.com/images/payment-methods.gif); display: block; width: 37px; height: 23px; text-indent: -9999em; float: left; }
+.card-type #pt-visa { background-position: -37px 0; }
+.card-type #pt-mastercard { background-position: -74px 0; }
+.card-type #pt-amex { background-position: -111px 0; }
+.card-type #pt-discover { background-position: -148px 0; }
+
+/* ui.selectmenu */
+.ui-selectmenu { display: block; position:relative; text-decoration: none; overflow:hidden;}
+.ui-selectmenu-icon { position:absolute; right:6px; margin-top:-8px; top: 50%; }
+.ui-selectmenu-menu { padding:0; margin:0; list-style:none; position:absolute; top: 0; visibility: hidden; overflow: auto; }
+.ui-selectmenu-open { visibility: visible; }
+.ui-selectmenu-menu-popup { margin-top: -1px; }
+.ui-selectmenu-menu-dropdown { }
+.ui-selectmenu-menu li { padding:0; margin:0; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0 !important; border-left-width: 0 !important; font-weight: normal !important; }
+.ui-selectmenu-menu li a,.ui-selectmenu-status {display:block; outline:none; text-decoration:none; }
+.ui-selectmenu-menu li.ui-selectmenu-hasIcon a,
+.ui-selectmenu-hasIcon .ui-selectmenu-status { position: relative; margin-left: 5px; }
+.ui-selectmenu-menu li .ui-icon, .ui-selectmenu-status .ui-icon { position: absolute; top: 1em; margin-top: -8px; left: 0; }
+.ui-selectmenu-status {}
+.ui-selectmenu-open li.ui-selectmenu-item-focus a {  }
+.ui-selectmenu-open li.ui-selectmenu-item-selected { }
+.ui-selectmenu-menu li span,.ui-selectmenu-status span { display:block; margin-bottom: .2em; }
+.ui-selectmenu-menu li .ui-selectmenu-item-header { font-weight: bold; }
+.ui-selectmenu-menu li .ui-selectmenu-item-content {  }
+.ui-selectmenu-menu li .ui-selectmenu-item-footer { opacity: .8; }
+
+
+.ui-helper-hidden
+{
+	display: none;
+}
+
+.ui-selectmenu 
+{
+	display: inline-block;
+	height: 23px;
+	border: 1px solid #d4d4d4; 
+	color: #626262;
+	background: white;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.ui-selectmenu-status
+{
+	line-height: 15px;
+	padding: 4px; 
+}
+
+.ui-icon-triangle-1-s
+{
+	position: absolute;
+	background: url(https://secure.piryx.com/images/v2/btn-down.gif) no-repeat top left;
+	width: 9px;
+	height: 5px;
+	top: 50%;
+	margin-top: -2px;
+	right: 4px;
+}
+
+.ui-selectmenu-menu
+{
+	background: white;
+	color: #626262;
+	border: 1px solid #d4d4d4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.ui-selectmenu-menu a
+{
+	color: #626262;
+}
+
+.ui-selectmenu.ui-state-hover
+{
+	height: 21px;
+	border: 2px solid #091B45;
+}
+
+.ui-selectmenu.ui-state-hover .ui-selectmenu-status
+{
+    padding: 3px;
+}
+
+.ui-selectmenu-menu li a
+{
+	padding: 4px;
+}
+
+.ui-selectmenu-menu li.ui-state-hover a
+{
+	color: white;
+	background: #091B45;
+}
+
+#sharecare-information 
+{
+	width:355px;
+	left:367px;
+	position:absolute;
+	top:0;
+}
+
+#giving-stream
+{
+	border: 1px solid #2DA606;
+	position: relative;
+}
+
+#giving-stream .header
+{
+	background: #2DA606;
+	color: white;
+	text-shadow: #1E6F04 1px 1px 0px;
+	padding: 10px 169px 10px 14px;
+	position: relative;
+}
+
+#giving-stream .header h1 
+{
+	position: absolute;
+	right: 14px;
+	top: 10px;
+	text-transform: lowercase;
+	font: bold 14px/16px Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: #FFFFFF;
+}
+
+#giving-stream .header h1 em
+{
+	font: italic bold 14px Georgia,serif;
+}
+
+#giving-stream .header h2
+{
+	font: bold 13px/16px Helvetica,sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: white;
+}
+
+#create-comment-form
+{
+	display: block;
+	padding: 11px;
+	position: relative;
+}
+
+#create-comment-form textarea
+{
+	width: 98%;
+	color: #000;
+	background-color:#ECF2F6;
+	border-color: #2DA606;
+}
+
+#create-comment-form .buttons
+{
+	padding: 0;
+	margin: 10px 0 0;
+	position: relative;
+}
+
+#create-comment-form .buttons input.button
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#create-comment-form .social-share
+{
+	
+}
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#colorbox{}
+#cboxContent{background:#fff; border: 8px solid black; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+#cboxLoadedContent{margin-bottom:28px;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+#cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+#cboxPrevious{position:absolute; bottom:0; left:0px; background:url(https://secure.piryx.com/images/controls.png) -75px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious.hover{background-position:-75px -25px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(https://secure.piryx.com/images/controls.png) -50px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext.hover{background-position:-50px -25px;}
+#cboxLoadingOverlay{background:url(https://secure.piryx.comimages/loading_background.png) center center no-repeat;}
+#cboxLoadingGraphic{background:url(https://secure.piryx.com/images/loading.gif) center center no-repeat;}
+#cboxClose{position:absolute; bottom:0; right:10px; background:url(https://secure.piryx.com/images/controls.png) -25px 0px no-repeat; width:25px; height:26px; text-indent:-9999px;}
+#cboxClose.hover{background-position:-25px -25px;}
+
+#share-dialog h1 
+{
+	background: #2DA606;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 14px;
+	color: white;
+	text-shadow: #1E6F04 1px 1px 0px;	
+}
+
+#share-dialog .body
+{
+	padding: 10px;
+	margin: 0 10px;
+	text-align: center;
+	border-bottom: 1px dotted #D4D4D4;
+}
+
+#share-dialog  a
+{
+	color: #324B67;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#share-dialog p
+{
+	margin: 4px 0;
+}
+
+label {font-size:10pt;}

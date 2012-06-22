@@ -1,0 +1,49 @@
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\bin\NEST.dll
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\bin\NEST.pdb
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\bin\EntityFramework.dll
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\bin\EntityFramework.xml
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\obj\Debug\NEST.dll
+C:\VisualStudioProjects\RR-NEST\RR-NEST\NEST\obj\Debug\NEST.pdb
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\bin\NEST.dll
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\bin\NEST.pdb
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\bin\EntityFramework.dll
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\bin\EntityFramework.xml
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\obj\Debug\NEST.dll
+C:\Visual Studio Projects\RR-NEST-052512\RR-NEST\NEST\obj\Debug\NEST.pdb
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\bin\NEST.dll
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\bin\NEST.pdb
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\bin\EntityFramework.dll
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\bin\EntityFramework.xml
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\obj\Debug\NEST.dll
+C:\VisualStudioProjects\RR-NEST-060812\RR-NEST-060812\NEST\obj\Debug\NEST.pdb
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\bin\NEST.dll
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\bin\NEST.pdb
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\bin\EntityFramework.dll
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\bin\EntityFramework.xml
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\obj\Debug\NEST.dll
+C:\Visual Studio Projects\RR-NEST-061112-2\RR-NEST-061112-2\NEST\obj\Debug\NEST.pdb
+C:\VisualStudioProjects\MAM-061812\NEST\bin\NEST.dll
+C:\VisualStudioProjects\MAM-061812\NEST\bin\NEST.pdb
+C:\VisualStudioProjects\MAM-061812\NEST\bin\EntityFramework.dll
+C:\VisualStudioProjects\MAM-061812\NEST\bin\EntityFramework.xml
+C:\VisualStudioProjects\MAM-061812\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\VisualStudioProjects\MAM-061812\NEST\obj\Debug\NEST.dll
+C:\VisualStudioProjects\MAM-061812\NEST\obj\Debug\NEST.pdb
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\bin\NEST.dll
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\bin\NEST.pdb
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\bin\EntityFramework.dll
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\bin\EntityFramework.xml
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\obj\Debug\NEST.dll
+C:\VisualStudioProjects\MAM-061812\MAM-061819\NEST\obj\Debug\NEST.pdb
+C:\VisualStudioProjects\MAM-062012\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\VisualStudioProjects\MAM-062012\NEST\bin\NEST.dll
+C:\VisualStudioProjects\MAM-062012\NEST\bin\NEST.pdb
+C:\VisualStudioProjects\MAM-062012\NEST\bin\EntityFramework.dll
+C:\VisualStudioProjects\MAM-062012\NEST\bin\EntityFramework.xml
+C:\VisualStudioProjects\MAM-062012\NEST\obj\Debug\NEST.dll
+C:\VisualStudioProjects\MAM-062012\NEST\obj\Debug\NEST.pdb

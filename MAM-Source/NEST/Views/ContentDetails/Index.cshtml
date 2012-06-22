@@ -1,0 +1,43 @@
+﻿@model IEnumerable<NEST.Models.ContentBody>
+
+<p>
+    @Html.ActionLink("Create New Item", "../ContentDetails/Create")
+</p>
+<table width="500">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Owner
+        </th>
+        <th>
+            Section
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentSection.Header)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "../ContentDetails/Edit", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

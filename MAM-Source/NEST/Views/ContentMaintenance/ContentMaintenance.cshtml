@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNEST.cshtml";
+    ViewBag.Title = "Add/Edit Content Pages";
+}
+<h2>@ViewBag.Title</h2>
+
+<div>
+
+<p>Below are the Active Sections of your site.  Click one to add/edit pages in that section, or @Html.ActionLink("Create New Section", "CreateSection", "ContentMaintenance").</p>
+
+<div>
+
+@Html.Partial("_SectionList")
+
+
+</div>
+
+</div>

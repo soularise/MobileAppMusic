@@ -1,0 +1,109 @@
+/* ----------------------------
+Author: Anders Haig = minim.co
+Version: 1.1
+File: CSS Styles
+---------------------------- */
+
+/* GLOBAL */
+
+body {
+	background:#222D34 url('../img/bg.png') 0 0 repeat;
+}
+input[type=submit],label,select,.pointer { cursor:pointer; }
+
+
+/* STANDARD */
+
+#wrapper {
+	width:220px;
+	height:220px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-110px;
+	margin-left:-110px;
+}
+
+#wrapper a {
+	margin:10px 0;
+}
+
+.button {
+	position:relative;
+	display:inline-block;
+	font-weight:bold;
+	font-size:16px;
+	font-family:Arial,sans-serif;
+	height:40px;
+	line-height:40px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color:#FFF;
+	text-shadow: 0px 1px 2px #000000;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	filter: dropshadow(color=#000000, offx=0, offy=1); 
+	text-decoration:none;
+	width:200px;
+	padding:0 0 0 20px;
+	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2),inset 0px 1px 0px rgba(255,255,255,0.25);
+	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2),inset 0px 1px 0px rgba(255,255,255,0.25);
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.2),inset 0px 1px 0px rgba(255,255,255,0.25);
+}
+
+.button span {
+	font-weight:normal;
+	background:none;
+	display:inline;
+}
+
+.button span::after {
+	content: "";
+	position:absolute;
+	background:url('../img/arrow.png') 0 0 no-repeat;
+	display:block;
+	width:13px;
+	height:19px;
+	top:50%;
+	right:15px;
+	margin-top:-9px;
+}
+
+.green {
+	background: #669765;
+	background: -moz-linear-gradient(top, #669765 0%, #669765 50%, #5D895C 50%, #5D895C 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#669765), color-stop(50%,#669765), color-stop(50%,#5D895C), color-stop(100%,#5D895C));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#669765', endColorstr='#5D895C',GradientType=0 );
+	background: -o-linear-gradient(top, #669765 0%,#669765 50%,#5D895C 50%,#5D895C 100%);
+}
+
+.green:hover {
+	background: #77AF75;
+	background: -moz-linear-gradient(top, #77AF75 0%, #77AF75 50%, #6EA06D 50%, #6EA06D 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#77AF75), color-stop(50%,#77AF75), color-stop(50%,#6EA06D), color-stop(100%,#6EA06D));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77AF75', endColorstr='#6EA06D',GradientType=0 );
+	background: -o-linear-gradient(top, #77AF75 0%,#77AF75 50%,#6EA06D 50%,#6EA06D 100%);
+}
+
+.blue {
+	background: #618398;
+	background: -moz-linear-gradient(top, #618398 0%, #618398 50%, #587789 50%, #587789 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#618398), color-stop(50%,#618398), color-stop(50%,#587789), color-stop(100%,#587789));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#618398', endColorstr='#587789',GradientType=0 );
+	background: -o-linear-gradient(top, #618398 0%,#618398 50%,#618398 50%,#587789 100%);
+}
+
+.blue:hover {
+	background: #7098AF;
+	background: -moz-linear-gradient(top, #7098AF 0%, #7098AF 50%, #688CA0 50%, #688CA0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7098AF), color-stop(50%,#7098AF), color-stop(50%,#688CA0), color-stop(100%,#688CA0));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7098AF', endColorstr='#688CA0',GradientType=0 );
+	background: -o-linear-gradient(top, #7098AF 0%,#7098AF 50%,#688CA0 50%,#688CA0 100%);
+}
+
+.button:active {
+	-webkit-box-shadow:inset 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow:inset 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow:inset 0 3px 3px rgba(0,0,0,0.2);
+	position:relative;
+	top:1px;
+}

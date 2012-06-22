@@ -1,0 +1,46 @@
+﻿@model NEST.Models.ContentBody
+@{
+    Layout = "~/Views/Shared/_SiteMasterSubpageLayout.cshtml";
+    if (Model.IncludePageHeader == "Y")
+    {
+        ViewBag.Title = "<h1>Contribute</h1>";  
+
+    }else{
+
+        ViewBag.Title = "";
+    }    
+    
+}
+<style>
+#main-content h1{}
+#main-content h2,h3{padding-left:0px;padding-top:10px;}    
+#main-content p{padding-bottom:2px;padding-top:2px;padding-left:0px;}
+</style>
+    @Html.Raw(ViewBag.Title)
+    @if (Model.Title != "")
+    {
+        <h2 style="font-size:@Model.TitleSize px;">@Html.DisplayFor(model => model.Title)</h2>
+    }
+    @if (Model.SubHeader != ""){
+        <h3 style="font-size:@Model.SubHeaderSize px;">@Html.DisplayFor(model => model.SubHeader)</h3>
+    }
+    <div style="padding-left:0px;width:700;">
+    @if (Model.BodyText.Length > 100){
+        @Html.Raw(Model.BodyText)
+    }
+    else
+    {
+        <h3>@Html.Raw(Model.BodyText)</h3>
+        }
+    </div>
+
+@{
+    var thisFrame = "";
+
+    thisFrame = Model.IFrameURL;   
+  
+    
+}
+
+<iframe src="@thisFrame" width="700" height="1700"></iframe>
+

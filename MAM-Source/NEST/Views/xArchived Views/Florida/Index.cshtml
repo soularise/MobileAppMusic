@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_SiteMasterSubpageLayout.cshtml";
+    ViewBag.Title = "FL - District 18";
+}
+<style>
+#main-content ul {
+    /*giving OL's LIs generated numbers*/
+    list-style:disc outside none;
+    margin-bottom:10px;
+}
+#main-content li {
+    /*giving UL's LIs generated disc markers*/
+    
+    display:list-item;
+    width:550px;
+    padding-left:0px;
+    margin-left:50px;
+    
+}
+</style>
+<h1>@ViewBag.Message</h1>
+
+<img src="@Url.Content("~/Content/theme-pm/images/FL18.png")" /

@@ -1,0 +1,26 @@
+﻿
+
+<h3>Official Releases</h3>
+<br /><br />
+ @{           
+     NEST.Models.NESTV1Entities db2 = new NEST.Models.NESTV1Entities();
+
+
+     var contentbodies = db2.ContentBodies.Where(c => c.SEOUrl == "PROMOTED").OrderBy(s => s.SortOrder);
+     contentbodies.ToList();     
+
+
+    int j = 1;
+    foreach (var mediaItem in contentbodies) 
+
+{
+    if(j <= 3)
+    {
+         <h4>@mediaItem.Title</h4>
+        <p>@mediaItem.SubHeader</p>
+         @Html.Raw(mediaItem.BodyText)
+        j++;
+    }
+}
+}
+
