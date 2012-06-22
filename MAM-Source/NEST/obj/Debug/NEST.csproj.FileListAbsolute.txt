@@ -47,3 +47,10 @@ C:\VisualStudioProjects\MAM-062012\NEST\bin\EntityFramework.dll
 C:\VisualStudioProjects\MAM-062012\NEST\bin\EntityFramework.xml
 C:\VisualStudioProjects\MAM-062012\NEST\obj\Debug\NEST.dll
 C:\VisualStudioProjects\MAM-062012\NEST\obj\Debug\NEST.pdb
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\bin\NEST.dll
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\bin\NEST.pdb
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\bin\EntityFramework.dll
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\bin\EntityFramework.xml
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\obj\Debug\NEST.dll
+C:\Users\Russell Rogers\Documents\GitHub\MobileAppMusic\MAM-Source\NEST\obj\Debug\NEST.pdb
